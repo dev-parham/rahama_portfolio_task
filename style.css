@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Lato SemiBold";
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+.card_image {
+  display: block;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  transition: all 0.5 ease-in-out;
+  width: 30%;
+}
+
+.card_overlay {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.card_text {
+  font-family: Peyda;
+  font-size: 10px;
+  align-self: center;
+  color: black;
+}
+
+.card:hover .card_overlay {
+  transition: all 1s;
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    row-gap: 10px;
+  }
+  .card {
+    width: 100%;
+  }
+}
